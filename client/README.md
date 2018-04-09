@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Git flow
 Installation: (https://github.com/nvie/gitflow/wiki/Installation)
+
 [Git Flow cheat sheet](http://danielkummer.github.io/git-flow-cheatsheet/)
 
 Clone Repo
