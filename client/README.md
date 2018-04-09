@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Sublime Text Plugins
 - SublimeLinter
 - SublimeLinter-ESlint
-- ESLint Formatter
+- ESLint Formatter `"format_on_save": false`
 - Babel
 
 ## Git flow
