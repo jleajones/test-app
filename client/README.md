@@ -2,6 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Local Development
 
+## Sublime Text Plugins
+- SublimeLinter
+- SublimeLinter-ESlint
+- ESLint Formatter
+- Babel
+
 ## Git flow
 Installation: (https://github.com/nvie/gitflow/wiki/Installation)
 
