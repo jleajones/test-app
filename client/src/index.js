@@ -8,6 +8,12 @@ import registerServiceWorker from "./registerServiceWorker";
 
 import store from "./store";
 import App from "./components/App";
+import { userLoggedIn } from "./actions/auth";
+
+if (localStorage.testAppJWT) {
+  const user = { token: localStorage.testAppJWT };
+  store.dispatch(userLoggedIn(user));
+}
 
 ReactDOM.render(
   <BrowserRouter>
