@@ -24,11 +24,21 @@ class LoginForm extends Component {
     const { data } = this.state;
     const errors = this.validate(data);
 
-    if (keys(errors).length === 0) this.props.submit(data);
-
     this.setState({
       errors
     });
+
+    if (keys(errors).length === 0) {
+      this.setState({
+        loading: true
+      });
+
+      this.props
+        .submit(data)
+        .catch(err =>
+          this.setState({ errors: err.response.data.errors, loading: false })
+        );
+    }
   };
 
   validate = data => {
@@ -41,11 +51,15 @@ class LoginForm extends Component {
   };
 
   render() {
-    const { data, errors } = this.state;
+    const { data, errors, loading } = this.state;
     const errorsList = keys(errors).map(key => errors[key]);
 
     return (
-      <Form onSubmit={this.onSubmit} error={errors.password || errors.email}>
+      <Form
+        loading={loading}
+        onSubmit={this.onSubmit}
+        error={errors.password || errors.email || errors.server}
+      >
         <Message
           error
           header="Oops, looks like there was mistake."
